@@ -17,7 +17,7 @@ public class LongWrapper {
 
 	public void incrementValue() {
 		synchronized (key) {
-			l = l + 1;
+			l = l + 1;  //read followed by a write, read and writes from different threads at different times
 		}
 	}
 }
